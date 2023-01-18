@@ -9,8 +9,11 @@ A simply designed webpage with the ability to generate a randomized password at 
 * CSS
 * javaScript
 
-## Link
+## Link to Repo
 https://github.com/skouchy/randoPswdGen
+
+## Link to Deployed Site
+https://skouchy.github.io/randoPswdGen/
 
 ### Screenshot
 ![10 0 0 99_5500_index html (1)](https://user-images.githubusercontent.com/119292219/213125553-61aabc29-2252-46c3-96c3-60c776073ff1.png)
