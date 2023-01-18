@@ -30,32 +30,28 @@ function generatePassword() {
     let choiceLength = prompt("How many characters would you like your password to include? (Must be a number 8 - 128)", '');
 
     //* Validates character limit condition in order to continue *//
+    // "if" wraps all conditionals, "else" is below to recall function if null//
     if (choiceLength >= 8 && choiceLength <= 128) {
-        console.log(choiceLength); // "if" wraps all conditionals, "else" is below to recall function if null//
 
-    //* Character-types: True values (user confirms) join final array group *//    
+        //* Character-types: True values (user confirms) join final array group *//    
         let choiceLower = confirm("Would you like your password to include lowercase characters?");
         if (choiceLower) {
             charArray = lowerCase.concat(charArray);
-            console.log(charArray);
         }
 
         let choiceUpper = confirm("Would you like your password to include UPPERCASE characters?");
         if (choiceUpper) {
             charArray = upperCase.concat(charArray);
-            console.log(charArray);
         }
 
         let choiceNumeric = confirm("Would you like your password to include NUM8ER5?");
         if (choiceNumeric) {
             charArray = numChar.concat(charArray);
-            console.log(charArray);
         }
 
         let choiceSpecial = confirm("Would you like your password to include $pec!@l characters?");
         if (choiceSpecial) {
             charArray = specialChar.concat(charArray);
-            console.log(charArray);
         }
 
         //* Validates requirement that a minimum of one character-type is chosen *//
@@ -74,7 +70,6 @@ function generatePassword() {
     //* Generates randomized password : user's choice of length and character-types *//
     for (let index = 0; index < choiceLength; index++) {
         var charLoops = charArray[Math.floor(Math.random() * charArray.length)];
-        console.log(charLoops);
         genPassword = genPassword + charLoops;
     }
     return genPassword;
