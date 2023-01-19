@@ -57,14 +57,14 @@ function generatePassword() {
         //* Validates requirement that a minimum of one character-type is chosen *//
         if (!choiceLower && !choiceUpper && !choiceNumeric && !choiceSpecial) {
             alert("Bummer. You must choose at least one character-type! Start over.");
-            generatePassword();
+            return null;
         }
     }
 
     //* Recalls {generatePassword} if character limit(user input) is invalid *//
     else {
         alert("You must choose a valid number between 8 and 128!")
-        generatePassword();
+        return null;
     }
 
     //* Generates randomized password : user's choice of length and character-types *//
