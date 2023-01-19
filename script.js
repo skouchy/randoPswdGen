@@ -77,5 +77,6 @@ function generatePassword() {
         console.log(charLoops);
         genPassword = genPassword + charLoops;
     }
+    console.log(genPassword);
     return genPassword;
 }
